@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/gribbler25/team-profile/issues"
   },
-  "homepage": "https://github.com/gribbler25/team-profile#readme"
+  "homepage": "https://github.com/gribbler25/team-profile#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
