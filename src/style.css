@@ -13,7 +13,8 @@
     font-family: var(--main-font-family);
     font-size: var(--main-font-size);
     width: 100%vw;
-    height: 20%vh;
+    height: 25%vh;
+    text-align: center;
 }
 
   

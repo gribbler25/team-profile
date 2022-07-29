@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
 
+const fs = require("fs");
+const generateHTML = require("./src/page-template.js");
 const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
@@ -28,21 +30,18 @@ const generateProfile = function () {
         message: "What is the manager's office number?",
       },
     ])
-    .then((mgrAnswers) => {
+    .then(function (mgrAnswers) {
       const manager = new Manager(
         mgrAnswers.name,
         mgrAnswers.ID,
         mgrAnswers.email,
         mgrAnswers.office
-      ).then((data) => {
-        const HTMLpage = generateHTML(
-          data.name,
-          data.ID,
-          data.email,
-          data.office
-        );
-        console.log(HTMLpage);
-      });
-    });
+      );
+      return manager;
+    })
+    .then(function (manager) {
+      const HTMLpage = generateHTML(manager);
+    })
+    .then(fs.writeFile("./dist/index.HTML", HTMLpage));
 };
 generateProfile();
