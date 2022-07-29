@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --main-font-family:helvetica;
+    --main-font-size: 2rem;
+    --secondary-font-size: 1rem;
+}
+.head{
+    background-color: red;
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
+    width: 100%vw;
+    height: 20%vh;
+}
+
+  
+.card-top{
+    background-color: skyblue;
+    font-size: var(--main-font-size);
+}
+.card{
+    width:25%vw;
+}
+.card-body{
+    font-size: var(--secondary-font-size);
+}
+h3, a{
+    border: .25rem;
+    padding: 2rem;
+}
