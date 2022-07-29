@@ -1,0 +1,1 @@
+test("creates a Team object", ()...)
