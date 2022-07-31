@@ -1,4 +1,9 @@
-function generateHTML(data) {
+function generateHTML(team) {
+  const name = team[0].name;
+  const ID = team[0].ID;
+  const email = team[0].email;
+  const office = team[0].office;
+  // const{name, ID, email, office}= team[0];
   //this may be a method on the Team object??
   return `<!DOCTYPE html>
     <html lang="en">
@@ -17,27 +22,20 @@ function generateHTML(data) {
            My Team
     </header>
 
-    <section class="d-flex flex-wrap justify-content-around align-items-center">
+    <section ID="cards" class="d-flex flex-wrap justify-content-around align-items-center">
     <div class="card">
   <div class="card-top">
-  <h2>Manager:  ${data.name}</h2> 
+  <h2>Manager:  ${name}</h2> 
   </div>
   <div class="card-body">
-    <h3 class="card-ID">ID: ${data.ID}</h3>
-    <a  href="mailto: ${data.email}">Email: ${data.email}</a>
-    <h3 class="card-office">Office Number:  ${data.office}</h3>
+    <h3 class="card-ID">ID: ${ID}</h3>
+    <a  href="mailto: ${email}">Email: ${email}</a>
+    <h3 class="card-office">Office Number:  ${office}</h3>
   </div>
 </div>
     </section>
     </body>
     </html>`;
-  // if(${data.addEmployee}){
-  //   for(let i=0;i<empArray.length;i++){
-  //     empArray[i].name
-  //     empArray[i].ID
-  //     empArray[i].email
-  //   }
-  // }
 }
 
 module.exports = generateHTML;

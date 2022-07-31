@@ -36,14 +36,6 @@ const initiateProfile = async function () {
   console.log(team);
   addEmployee();
 };
-// })
-//create new Intern and new Engineer as needed ....
-//     .then(function (manager) {
-//       const HTMLpage = generateHTML(manager);
-//       fs.writeFile("./dist/index.HTML", HTMLpage, (err) => {
-//         if (err) throw new Error(err);
-//       });
-//     });
 
 const addEmployee = async function () {
   const { employee } = await inquirer.prompt([
@@ -60,8 +52,8 @@ const addEmployee = async function () {
       return addIntern();
     case "Engineer":
       return addEngineer();
-    default:
-    //return writehtml fxn
+    case "none":
+      console.log(generateHTML(team));
   }
 };
 
@@ -124,31 +116,11 @@ const addIntern = async function () {
 };
 
 initiateProfile();
-
-// .then((response) =>
-//   console.log(response).then((data) => createProfiles())
+//.then((team) => {
+//   console.log(generateHTML(team));
+// });
+// .then((HTMLpage) =>
+//   fs.writeFile("./dist/index.HTML", HTMLpage, (err) => {
+//     if (err) throw new Error(err);
+//   })
 // );
-//   .then(createProfiles()
-//     () => {
-//     return generateHTML(data);
-//   });
-
-// //to use logic from profile generator??:
-// promptUser()
-//   .then(promptProject)
-//   .then((portfolioData) => {
-//     return generatePage(portfolioData);
-//   })
-//   .then((pageHTML) => {
-//     return writeFile(pageHTML);
-//   })
-//   .then((writeFileResponse) => {
-//     console.log(writeFileResponse);
-//     return copyFile();
-//   })
-//   .then((copyFileResponse) => {
-//     console.log(copyFileResponse);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
