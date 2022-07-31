@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const team = [];
 const fs = require("fs");
+const dynHTML = require("./utils/dynHTML.js");
 const generateHTML = require("./src/page-template.js");
 const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
@@ -53,7 +54,7 @@ const addEmployee = async function () {
     case "Engineer":
       return addEngineer();
     case "none":
-      console.log(generateHTML(team));
+      console.log(dynHTML(team));
   }
 };
 
