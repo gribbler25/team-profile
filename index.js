@@ -95,20 +95,20 @@ const addEngineer = async function () {
 };
 
 const addIntern = async function () {
-  const { name, ID, email, github } = await inquirer.prompt([
+  const { name, ID, email, school } = await inquirer.prompt([
     {
       type: "input",
-      name: "name2",
+      name: "name",
       message: "What is the Intern's name?",
     },
     {
       type: "input",
-      name: "ID2",
+      name: "ID",
       message: "What is the Intern's ID number?",
     },
     {
       type: "input",
-      name: "email2",
+      name: "email",
       message: "What is the Intern's email address?",
     },
     {
@@ -117,7 +117,9 @@ const addIntern = async function () {
       message: "What is the Intern's school name?",
     },
   ]);
-
+  const newIntern = new Intern(name, ID, email, school);
+  team.push(newIntern);
+  console.log(team);
   addEmployee();
 };
 
