@@ -54,7 +54,7 @@ const addEmployee = async function () {
     case "Engineer":
       return addEngineer();
     case "none":
-      console.log(dynHTML(team));
+      return generateHTML(dynHTML);
   }
 };
 
@@ -116,12 +116,8 @@ const addIntern = async function () {
   addEmployee();
 };
 
-initiateProfile();
-//.then((team) => {
-//   console.log(generateHTML(team));
-// });
-// .then((HTMLpage) =>
-//   fs.writeFile("./dist/index.HTML", HTMLpage, (err) => {
-//     if (err) throw new Error(err);
-//   })
-// );
+initiateProfile().then(
+  fs.writeFile("./dist/index.HTML", addEmployee, (err) => {
+    if (err) throw new Error(err);
+  })
+);

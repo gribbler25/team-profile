@@ -1,4 +1,6 @@
-function generateHTML() {
+const dynHTML = require("../utils/dynHTML");
+
+function generateHTML(dynHTML) {
   // const office = team[0].office;
   // const{name, ID, email, office}= team[0];
   //this may be a method on the Team object??
@@ -25,23 +27,5 @@ function generateHTML() {
     </body>
     </html>`;
 }
-
-// function dynHTML(team) {
-//   for (let i = 0; i < team.length; i++) {
-//     let name = team[0].name;
-//     let ID = team[0].ID;
-//     let email = team[0].email;
-//     return `<div class="card">
-// <div class="card-top">
-// <h2>Manager:  ${name}</h2>
-// </div>
-// <div class="card-body">
-//   <h3 class="card-ID">ID: ${ID}</h3>
-//   <a  href="mailto: ${email}">Email: ${email}</a>
-//   <h3 class="card-office">Office Number:  </h3>
-// </div>
-// </div>`;
-//   }
-// }
 
 module.exports = generateHTML;
