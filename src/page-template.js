@@ -1,9 +1,6 @@
 const dynHTML = require("../utils/dynHTML");
 
 function generateHTML(team) {
-  // const office = team[0].office;
-  // const{name, ID, email, office}= team[0];
-  //this may be a method on the Team object??
   return `<!DOCTYPE html>
     <html lang="en">
   
