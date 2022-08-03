@@ -12,6 +12,8 @@ This project presents a simple question/answer format at the command line using 
 - CSS
 - Node.js
 - NPM for Inquirer
+- Jest for testing
+
   </br>
 
 ## Table of Contents:
@@ -41,7 +43,7 @@ This project presents a simple question/answer format at the command line using 
   </br>
 
   <h2 id="test"> Testing instructions:</h2>
-  To test this application, simply run 'node index' from the command line, answer question prompts, and if error follow error code instructions.
+  To test this application, simply run 'node index' from the command line, answer question prompts, and if error follow error code instructions. Individual test files for the successful creation of class constructor Employee object also available.
 
   </br>
 

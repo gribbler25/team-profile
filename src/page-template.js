@@ -1,6 +1,6 @@
 const dynHTML = require("../utils/dynHTML");
 
-function generateHTML(dynHTML) {
+function generateHTML(team) {
   // const office = team[0].office;
   // const{name, ID, email, office}= team[0];
   //this may be a method on the Team object??
@@ -22,7 +22,7 @@ function generateHTML(dynHTML) {
     </header>
 
     <section ID="cards" class="d-flex flex-wrap justify-content-around align-items-center">
-  ${dynHTML}
+  ${dynHTML(team)}
     </section>
     </body>
     </html>`;
